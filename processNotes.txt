@@ -1,0 +1,10 @@
+Process
+==========================
+
+1. Create the basic clock layout.
+    o   Since this is going to be an analog clock, so it will have:
+        o   Hour hand
+        o   Minute hand
+        o   Second hand
+        o   Clock body
+        o   Hour numbers
