@@ -8,3 +8,9 @@ Process
         o   Second hand
         o   Clock body
         o   Hour numbers
+
+    o   Create a div for the clock clock itself
+    o   Within the clock div, create divs for each one of the components above.
+    o   For each element, create two classes: type (e.g. hand or number) and the specific element (e.g. hour, minute, second). 
+
+2. 
