@@ -89,10 +89,14 @@ body {                                                                          
 
 .clock > .hand {                                                     /* For each hand (hour, minute, second... */
     position: absolute;                                                  /* hands will be positioned absolute to the clock */
+    background: black;                                                 /* color of the hand*/
     width: 10px;                                                         /* each hand will have a width of 10px*/
     height: 40%;                                                         /* each hand will have a length of 40% */
     bottom: 50%;                                                         /* for each hand, the bottom will be at the bottom*/
     left: 50%;                                                           /* and set left to 50% for center alignment*/
-    background: black;
+                                                                /* for how we want each hand to rotate: */
+    transform: translateX(-50%) rotate(var(--rotation));            /* Because at this point the hand will show off-center, you transform using trnaslateX, it translates the object by */
+                                                                        /* ...50% of its width backwards.  */
+    --rotation: 0;                                                      /* rotation */
 
 }
