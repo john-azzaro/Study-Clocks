@@ -1,7 +1,10 @@
 'use strict';
 
+setInterval(setClock, 1000)                                            // first, use setInterval to call "setClock" every 1000 milliseconds.
 
-setInterval(setClock, 1000)                                             // first, use setInterval to call "setClock" every 1000 milliseconds.
+const hourHand = document.querySelector('[hour-hand]');                // Query selector for data attribute hour-hand
+const minuteHand = document.querySelector('[minute-hand]');            // Query selector for data attribute minute-hand
+const secondHand = document.querySelector('[second-hand]');            // Query selector for data attribute second-hand
 
 function setClock() {
     const currentDate = new Date();                                     // to get current date, call new Date constructor.
