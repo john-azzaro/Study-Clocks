@@ -1,5 +1,5 @@
 # Clocks Study
-See it Live: 
+See it Live: https://john-azzaro.github.io/Study-Clocks/
 
 <br>
 
@@ -8,7 +8,7 @@ See it Live:
 
 <br>
 
-## Does Calculator Study feature commentary?
+## Does the Clocks Study feature commentary?
 Yes! I use extensive Commentary (mostly in the form of my thought process) so that the new and curious can follow the logic in the program and get an idea of my reasoning behind each and every line of code.  In addition to my line-by-line commantary, I also provide a Process text file that gives a good outline of my design and implementation process. 
 
 <br>
@@ -22,8 +22,6 @@ Since this study is ongoing, basic functionalities are covered first and more ad
 | Hour-hand                                |                                                 |
 | Minute-hand                              |                                                 |
 | Second-hand                              |              current time updated every second  |  
-
-## ?
 
 
 <br>
