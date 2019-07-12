@@ -1,3 +1,6 @@
-*, *::before, *::after {
-    box-sizing: border-box;
+*, *::before, *::after {                                        /* For Default values*/
+    box-sizing: border-box;                                       /* Includes padding and border in elements total width an d height */
+    font-family: 'Poppins', sans-serif;                           /* font used (with metalink in HTML) */
 }
+
+

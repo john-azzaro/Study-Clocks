@@ -13,4 +13,7 @@ Process
     o   Within the clock div, create divs for each one of the components above.
     o   For each element, create two classes: type (e.g. hand or number) and the specific element (e.g. hour, minute, second). 
 
-2. 
+2. Style class:
+    o   Default values
+    o   body background
+    o   

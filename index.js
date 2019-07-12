@@ -1,1 +1,1 @@
-'use strcit';
+'use strict';
