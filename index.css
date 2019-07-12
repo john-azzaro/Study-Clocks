@@ -5,6 +5,11 @@
 
 body {                                                                                                   /* body (essentially the background) */
     background: linear-gradient(to right, rgb(177, 178, 189), rgb(165, 168, 149));                     /* gradient from right grey to yellow*/
+    display: flex;                                                                                         /* to center the clock, first display to flex*/
+    min-height: 100vh;                                                                                     /* set the minimum height to 100vh so we can position the clock*/
+    justify-content: center;                                                                               /* center the clock in the middle of the screen (at top before align-items */
+    align-items: center;                                                                                   /* then align-items center to put the clock exactly in the middle of the screen. */
+    overflow: hidden;                                                                                      /* and get rid of the scrollbar*/
 }
 
 .clock {                                                                                                 /* for the clock itself*/                      
@@ -32,12 +37,12 @@ body {                                                                          
 
 .clock > .number1 {                                                                                      /* so when you select .number1, you will be able*/
     --rotation: 30deg;
-    font-size: .8rem;
+    font-size: 1rem;
     padding-top: 10px;
 }
 .clock > .number2 {                                                                                      
     --rotation: 60deg;
-    font-size: .8rem;
+    font-size: 1rem;
     padding-top: 10px;
 }
 .clock > .number3 {                                                                                      
@@ -46,12 +51,12 @@ body {                                                                          
 }
 .clock > .number4 {                                                                                      
     --rotation: 120deg;
-    font-size: .8rem;
+    font-size: 1rem;
     padding-top: 10px;
 }
 .clock > .number5 {                                                                                      
     --rotation: 150deg;
-    font-size: .8rem;
+    font-size: 1rem;
     padding-top: 10px;
 }
 .clock > .number6 {                                                                                      
@@ -60,12 +65,12 @@ body {                                                                          
 }
 .clock > .number7 {                                                                                      
     --rotation: 210deg;
-    font-size: .8rem;
+    font-size: 1rem;
     padding-top: 10px;
 }
 .clock > .number8 {                                                                                      
     --rotation: 240deg;
-    font-size: .8rem;
+    font-size: 1rem;
     padding-top: 10px;
 }
 .clock > .number9 {                                                                                      
@@ -74,12 +79,12 @@ body {                                                                          
 }
 .clock > .number10 {                                                                                      
     --rotation: 300deg;
-    font-size: .8rem;
+    font-size: 1rem;
     padding-top: 10px;
 }
 .clock > .number11 {                                                                                      
     --rotation: 330deg;
-    font-size: .8rem;
+    font-size: 1rem;
     padding-top: 10px;
 }
 .clock > .number12 {                                                                                      
@@ -89,15 +94,49 @@ body {                                                                          
 
 .clock > .hand {                                                         /* For each hand (hour, minute, second... */
     position: absolute;                                                     /* hands will be positioned absolute to the clock */
-    background: black;                                                    /* color of the hand*/
-    width: 10px;                                                            /* each hand will have a width of 10px*/
-    height: 40%;                                                            /* each hand will have a length of 40% */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     bottom: 50%;                                                            /* for each hand, the bottom will be at the bottom*/
     left: 50%;                                                              /* and set left to 50% for center alignment*/
-    
+
                                                                          /* for how we want each hand to rotate: */
     transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));       /* Because at this point the hand will show off-center, you transform using translateX, it translates the object by */
                                                                             /* ...50% of its width backwards. To make sure it rotates, we want to use the rotation variable and use calc * 1deg */                                                                    
-    --rotation: 30;                                                         /* rotation set default to 0 so it shows...*/
+    --rotation: 0;                                                         /* rotation set default to 0 so it shows...*/
     transform-origin: bottom;                                               /* to establish a point for the hands to rotate around, use transform-origin to say where you want the transform to be applied to, namely the bottom*/
+    z-index: 10;                                                           /* to ake sure the hands are always on top of the other elements, set to 10.*/
 }
+
+.clock > .hand.hour {
+    width: 10px;                                                             /* hour hand width*/
+    height: 25%; 
+    background: black;                                                    /* hour hand height (i.e. length from center to outer clock) */
+}
+
+.clock > .hand.second {
+    width: 2px;                                                             /* second hand width*/
+    height: 35%;                                                            /* second hand height (i.e. length from center to outer clock) */
+    background: rgb(135, 143, 158); 
+}
+.clock > .hand.minute {
+    width: 4px;                                                             /* minute hand width*/
+    height: 40%;                                                            /* minute hand height (i.e. length from center to outer clock) */
+    background: rgb(192, 162, 28); 
+}
+
+.clock::after {                                                              /* to create a circular element at the middle of the clock:*/
+    content: '';                                                                /* add a new empty element to the DOM that can be styled */
+    position: absolute;
+    background-color: black;
+    z-index: 11;                                                                /* setting z-index to 11 makes sure that this shows above all hands */
+    height: 15px;                                                               /* height, width, and border radius create the circle */
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;                                                                   /* top and left 50% center the new element in the middle of the clock */
+    left: 50%;
+    transform: translate(-50%, -50%);                                            /* centers the round element so that it is perfectly center */
+
+
+
+}
+
