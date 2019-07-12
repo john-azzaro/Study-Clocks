@@ -16,6 +16,6 @@ function setClock() {
     setClockRotation(hourHand, hours);       
 }
 
-function setClockRotation(element, rotation) {                                   // To set the hands to the proper times. which take the element we want to rotate and the rotation we want to use:
-    element.style.setProperty('--rotation', rotation * 360)               // so take the element you want, take the style of that element, and call the setProperty method which take the property we want ot set (i.e. --rotation) and set to rotation of 360 degrees for the complete rotation.
+function setClockRotation(element, rotation) {                           // To set the hands to the proper times. which take the element we want to rotate and the rotation we want to use:
+    element.style.setProperty('--rotation', rotation * 360)              // so select the element you want, take the style of that element, and call the setProperty method which take the property we want ot set (i.e. --rotation) and set to rotation of 360 degrees for the complete rotation.
 }             

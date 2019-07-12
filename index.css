@@ -108,7 +108,7 @@ body {                                                                          
 }
 
 .clock > .hand.hour {
-    width: 10px;                                                             /* hour hand width*/
+    width: 6px;                                                             /* hour hand width*/
     height: 25%; 
     background: black;                                                    /* hour hand height (i.e. length from center to outer clock) */
 }
@@ -116,12 +116,14 @@ body {                                                                          
 .clock > .hand.second {
     width: 2px;                                                             /* second hand width*/
     height: 35%;                                                            /* second hand height (i.e. length from center to outer clock) */
-    background: rgb(135, 143, 158); 
+    z-index: 1;                                                             /* set z-index over minute, under hour*/
+    background: rgb(97, 104, 119); 
 }
 .clock > .hand.minute {
     width: 4px;                                                             /* minute hand width*/
     height: 40%;                                                            /* minute hand height (i.e. length from center to outer clock) */
-    background: rgb(192, 162, 28); 
+    z-index: 0;                                                             /* set z-index under hour and second*/
+    background: rgb(153, 125, 0); 
 }
 
 .clock::after {                                                              /* to create a circular element at the middle of the clock:*/
@@ -129,8 +131,8 @@ body {                                                                          
     position: absolute;
     background-color: black;
     z-index: 11;                                                                /* setting z-index to 11 makes sure that this shows above all hands */
-    height: 15px;                                                               /* height, width, and border radius create the circle */
-    width: 15px;
+    height: 12px;                                                               /* height, width, and border radius create the circle */
+    width: 12px;
     border-radius: 50%;
     top: 50%;                                                                   /* top and left 50% center the new element in the middle of the clock */
     left: 50%;
