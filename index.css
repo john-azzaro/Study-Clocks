@@ -8,10 +8,16 @@ body {                                                                          
 }
 
 .clock {                                                                                                 /* for the clock itself*/                      
+    position: relative;                                                                                      /* by setting the clock to relative, the numbers and hands will be set absolute to this parent*/
     width: 300px;                                                                                            /* shape of clock = equal width and height and 50% border radius*/
     height: 300px;               
     border-radius: 50%;
-    border: 2px solid rgba(120, 121, 124, 0.5);
+    border: 2px solid rgba(94, 96, 102, 0.5);
     box-shadow: 0 10px 20px -6px rgba(175, 175, 175, .5);                                                  /* shadow |Horiz offset|vert offset|blur|spread|color(rgba for transparentcy|*/
     background-color: rgba(255,255,255, .75);                                                              /* partially transparent white*/
+}
+
+.clock > number {                                                                                      /* For each number in the clock (note that this is a child of .clock for positioning*/
+    position: absolute;                                                                                     /* for each number the position will be position absolutely relative to the parent .clock which we want number positions*/       
+    
 }
