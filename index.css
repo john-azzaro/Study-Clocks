@@ -14,16 +14,16 @@ body {                                                                          
     border-radius: 50%;
     border: 2px solid rgba(94, 96, 102, 0.5);
     box-shadow: 0 10px 20px -6px rgba(175, 175, 175, .5);                                                  /* shadow |Horiz offset|vert offset|blur|spread|color(rgba for transparentcy|*/
-    background-color: rgba(255,255,255, .75);                                                              /* partially transparent white*/
+    background-color: rgba(255,255,255, .90);                                                              /* partially transparent white*/
 }
 
 .clock > .number {                                                                                      /* For each number in the clock (note that this is a child of .clock for positioning*/
     position: absolute;                                                                                     /* for each number the position will be position absolutely relative to the parent .clock which we want number positions*/       
-                                                                                                        /* For alignment of numbers around the clock: */
+                                                                                                /* For alignment of numbers around the clock: */
     width: 100%;                                                                                            /* with width and height set to 100%, it is 100% of the parent .clock... */
     height: 100%;                                                                                           /* ... so this will be a square over the parent clock element which we can rotate for each number */
     text-align: center;                                                                                     /* center the text in the middle of the clock so when the square rotates, it will position correctly in a circle*/          
-                                                                                                       /* for rotation of numbers: (example: transform: rotate(90deg)*/
+                                                                                                /* for rotation of numbers: (example: transform: rotate(90deg)*/
                                                                                                        /* However, because we have 12 numbers and we dont want to do each individually, you can use a variable  */
     transform: rotate(var(--rotation));                                                                     /* so we use transform, and rotate using a --rotation variable....*/
     --rotation: 0;                                                                                         /*... and set that variable to 0 to make sure we start at the 12 o'clock point...*/
@@ -32,4 +32,67 @@ body {                                                                          
 
 .clock > .number1 {                                                                                      /* so when you select .number1, you will be able*/
     --rotation: 30deg;
+    font-size: .8rem;
+    padding-top: 10px;
+}
+.clock > .number2 {                                                                                      
+    --rotation: 60deg;
+    font-size: .8rem;
+    padding-top: 10px;
+}
+.clock > .number3 {                                                                                      
+    --rotation: 90deg;
+    font-size: 1.5rem;
+}
+.clock > .number4 {                                                                                      
+    --rotation: 120deg;
+    font-size: .8rem;
+    padding-top: 10px;
+}
+.clock > .number5 {                                                                                      
+    --rotation: 150deg;
+    font-size: .8rem;
+    padding-top: 10px;
+}
+.clock > .number6 {                                                                                      
+    --rotation: 180deg;
+    font-size: 1.5rem;
+}
+.clock > .number7 {                                                                                      
+    --rotation: 210deg;
+    font-size: .8rem;
+    padding-top: 10px;
+}
+.clock > .number8 {                                                                                      
+    --rotation: 240deg;
+    font-size: .8rem;
+    padding-top: 10px;
+}
+.clock > .number9 {                                                                                      
+    --rotation: 270deg;
+    font-size: 1.5rem;
+}
+.clock > .number10 {                                                                                      
+    --rotation: 300deg;
+    font-size: .8rem;
+    padding-top: 10px;
+}
+.clock > .number11 {                                                                                      
+    --rotation: 330deg;
+    font-size: .8rem;
+    padding-top: 10px;
+}
+.clock > .number12 {                                                                                      
+    --rotation: 0;
+    font-size: 1.5rem;
+}
+
+.clock > .hand {                                                     /* For each hand (hour, minute, second... */
+    position: absolute;                                                  /* hands will be positioned absolute to the clock */
+    width: 10px;                                                         /* each hand will have a width of 10px*/
+    height: 40%;                                                         /* each hand will have a length of 40% */
+    bottom: 50%;                                                         /* for each hand, the bottom will be at the bottom*/
+    left: 50%;                                                           /* and set left to 50% for center alignment*/
+    background: black;
+
 }
