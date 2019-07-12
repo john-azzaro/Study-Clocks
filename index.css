@@ -87,16 +87,17 @@ body {                                                                          
     font-size: 1.5rem;
 }
 
-.clock > .hand {                                                     /* For each hand (hour, minute, second... */
-    position: absolute;                                                  /* hands will be positioned absolute to the clock */
-    background: black;                                                 /* color of the hand*/
-    width: 10px;                                                         /* each hand will have a width of 10px*/
-    height: 40%;                                                         /* each hand will have a length of 40% */
-    bottom: 50%;                                                         /* for each hand, the bottom will be at the bottom*/
-    left: 50%;                                                           /* and set left to 50% for center alignment*/
-                                                                /* for how we want each hand to rotate: */
-    transform: translateX(-50%) rotate(var(--rotation));            /* Because at this point the hand will show off-center, you transform using trnaslateX, it translates the object by */
-                                                                        /* ...50% of its width backwards.  */
-    --rotation: 0;                                                      /* rotation */
-
+.clock > .hand {                                                         /* For each hand (hour, minute, second... */
+    position: absolute;                                                     /* hands will be positioned absolute to the clock */
+    background: black;                                                    /* color of the hand*/
+    width: 10px;                                                            /* each hand will have a width of 10px*/
+    height: 40%;                                                            /* each hand will have a length of 40% */
+    bottom: 50%;                                                            /* for each hand, the bottom will be at the bottom*/
+    left: 50%;                                                              /* and set left to 50% for center alignment*/
+    
+                                                                         /* for how we want each hand to rotate: */
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));       /* Because at this point the hand will show off-center, you transform using translateX, it translates the object by */
+                                                                            /* ...50% of its width backwards. To make sure it rotates, we want to use the rotation variable and use calc * 1deg */                                                                    
+    --rotation: 30;                                                         /* rotation set default to 0 so it shows...*/
+    transform-origin: bottom;                                               /* to establish a point for the hands to rotate around, use transform-origin to say where you want the transform to be applied to, namely the bottom*/
 }
