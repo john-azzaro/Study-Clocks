@@ -17,7 +17,19 @@ body {                                                                          
     background-color: rgba(255,255,255, .75);                                                              /* partially transparent white*/
 }
 
-.clock > number {                                                                                      /* For each number in the clock (note that this is a child of .clock for positioning*/
+.clock > .number {                                                                                      /* For each number in the clock (note that this is a child of .clock for positioning*/
     position: absolute;                                                                                     /* for each number the position will be position absolutely relative to the parent .clock which we want number positions*/       
-    
+                                                                                                        /* For alignment of numbers around the clock: */
+    width: 100%;                                                                                            /* with width and height set to 100%, it is 100% of the parent .clock... */
+    height: 100%;                                                                                           /* ... so this will be a square over the parent clock element which we can rotate for each number */
+    text-align: center;                                                                                     /* center the text in the middle of the clock so when the square rotates, it will position correctly in a circle*/          
+                                                                                                       /* for rotation of numbers: (example: transform: rotate(90deg)*/
+                                                                                                       /* However, because we have 12 numbers and we dont want to do each individually, you can use a variable  */
+    transform: rotate(var(--rotation));                                                                     /* so we use transform, and rotate using a --rotation variable....*/
+    --rotation: 0;                                                                                         /*... and set that variable to 0 to make sure we start at the 12 o'clock point...*/
+                                                                                                           /*...from this point, we can set each number to the correct degree around the clock!*/
+}
+
+.clock > .number1 {                                                                                      /* so when you select .number1, you will be able*/
+    --rotation: 30deg;
 }
