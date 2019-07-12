@@ -1,6 +1,17 @@
-*, *::before, *::after {                                        /* For Default values*/
-    box-sizing: border-box;                                       /* Includes padding and border in elements total width an d height */
-    font-family: 'Poppins', sans-serif;                           /* font used (with metalink in HTML) */
+*, *::before, *::after {                                                                                 /* For Default values*/
+    box-sizing: border-box;                                                                                  /* Includes padding and border in elements total width an d height */
+    font-family: 'Poppins', sans-serif;                                                                      /* font used (with metalink in HTML) */
 }
 
+body {                                                                                                   /* body (essentially the background) */
+    background: linear-gradient(to right, rgb(177, 178, 189), rgb(165, 168, 149));                     /* gradient from right grey to yellow*/
+}
 
+.clock {                                                                                                 /* for the clock itself*/                      
+    width: 300px;                                                                                            /* shape of clock = equal width and height and 50% border radius*/
+    height: 300px;               
+    border-radius: 50%;
+    border: 2px solid rgba(120, 121, 124, 0.5);
+    box-shadow: 0 10px 20px -6px rgba(175, 175, 175, .5);                                                  /* shadow |Horiz offset|vert offset|blur|spread|color(rgba for transparentcy|*/
+    background-color: rgba(255,255,255, .75);                                                              /* partially transparent white*/
+}

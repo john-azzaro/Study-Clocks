@@ -16,4 +16,4 @@ Process
 2. Style class:
     o   Default values
     o   body background
-    o   
+    o   clock stylization
