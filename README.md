@@ -29,7 +29,17 @@ The ```setInterval``` is a *timing event* that repeats the execution of a functi
     }
 ```
 </dd>
+<br>
+
+###  The "rotate" CSS function rotates an element around a fixed point.
+-----
+
 <dd>
+
+</dd>
+
+
+
 
 </dd>
 
