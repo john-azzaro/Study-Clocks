@@ -4,7 +4,13 @@ See it Live: https://john-azzaro.github.io/Study-Clocks/
 <br>
 
 ## What is Clocks Study?
-"Clocks Study" is an examination of clock functionality collected in one handy repository.  The study includes a fully functional analog clock example with digital clock examples to follow in the future.
+"Clocks Study" is an examination of analog clock functionality collected in one handy repository.  The study includes a fully functional analog clock example with hour, minute, and second hands, and a unique stylization.
+
+Here are a few questions from the study to consider:
+
+* [](#)
+* [](#)
+* [](#)
 
 <br>
 
@@ -17,11 +23,11 @@ Yes! I use extensive Commentary (mostly in the form of my thought process) so th
 Since this study is ongoing, basic functionalities are covered first and more advanced features are added or will be added in the future.  For a complete list of current and future changes, see below:
 
 
-| **Features:**                            | **Feature Notes:**                             |
+| **Features:**                            | **Feature Notes:**                           |
 | ---------------------------------------- | ----------------------------------------------|
-| Hour-hand                                |                                                 |
-| Minute-hand                              |                                                 |
-| Second-hand                              |              current time updated every second  |  
+| Hour-hand                                |                                               |
+| Minute-hand                              |                                               |
+| Second-hand                              |           current time updated every second  |  
 
 
 <br>
