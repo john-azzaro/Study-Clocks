@@ -32,7 +32,7 @@ The ```setInterval``` is a *timing event* that repeats the execution of a functi
 </dd>
 <br>
 
-###  Use CSS variables for repeatable CSS properties to rotate an element 
+###  Use CSS variables for repeatable CSS properties to rotate an element. 
 -----
 <dd>
 
@@ -56,9 +56,9 @@ For this clock prototype, we have numbers 1 through 12 that we need to rotate ar
 </dd>
 
 <br>
-<dd>
 
-### Date constructors establish accurate timestamps
+### Date constructors create accurate timestamps!
+------
 <dd>
 In order to establish the correct time for the clock, you need to use a Data constructor.  In this case, we use a Date constructor without an parameters, however it should be noted that there are a few additional ways to establish time as well. 
 
