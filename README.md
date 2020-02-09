@@ -16,7 +16,7 @@ Here are a few questions from the study to consider:
 <br>
 
 ## What are the key takeaways from the Clocks Study?
-<br>
+
 <dl>
 
 ### The setInterval method repeats a given function every given time-interval.
